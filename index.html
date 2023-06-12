@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Conversor de monedas</title>
+    
+</head>
+<body>
+    <header>
+        <img src="img/pngwing.com.png" width="100px">
+        <h1>Conversor de monedas</h1>
+    </header>
+    <main>
+        <form onsubmit="convertir(); return false" id="miForm">
+            <div class="itemForm">
+                <label for="cantidad">Introduce la cantidad</label>
+                <input type="number" name="cantidad" id="cantidad" required>
+            </div>
+            <div class="itemForm">
+                <label for="desde" >De:</label>
+                <select name="desde" id="desde">
+                    <option value="0">-Seleccione tipo de moneda de entrada-</option>
+                    <option value="EUR">Euro</option>
+                    <option value="USD">Dolar americano</option>
+                    <option value="JPY">Yen japonés</option>
+                    <option value="CLP">Pesos chilenos</option>
+                </select>
+            </div>
+            <div class="itemForm">
+                <label for="hacia">A:</label>
+                <select name="hacia" id="hacia">
+                    <option value="0">-Seleccione tipo de moneda de salida-</option>
+                    <option value="EUR">Euro</option>
+                    <option value="USD">Dolar americano</option>
+                    <option value="JPY">Yen japonés</option>
+                    <option value="CLP">Pesos chilenos</option>
+                </select>
+                
+            </div>
+            <div class="itemForm">
+                <input type="submit" value="CALCULAR">
+            </div>
+            <div class="itemForm">
+                <label for="result">Resultado</label>
+                <input type="number" id="result" readonly>
+            </div>
+        </form>
+    </main>
+<!--PIE DE PÁGINA-->
+<footer>
+    <p>Projecto de aprendizaje personal</p>
+</footer>
+<script src="js/app.js" ></script>
+</body>
+</html>
